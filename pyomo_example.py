@@ -29,7 +29,7 @@ class Optimization:
         self.model.c1 = Constraint(expr = self.model.a_variable + 5 * self.model.b_variable <= self.model.x)    # 제약 조건 선언
         self.model.c2 = Constraint(expr = sum(self.model.c_variable[i] for i in self.model.IDX) <= self.model.a_variable)
 
-        self.model.limits = ConstraintList()         # 제역 조건 list 선언 (for 문 활용에 용이)
+        self.model.limits = ConstraintList()         # 제 조건 list 선언 (for 문 활용에 용이)
         self.model.limits.add(30*self.model.x + 15*self.model.y <= 100)
         self.model.limits.add(15*self.model.x + 30*self.model.y <=50)
 
